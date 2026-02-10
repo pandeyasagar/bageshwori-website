@@ -1,21 +1,18 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Businesses from "./components/Businesses"
-import Locations from "./components/Locations"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import BranchPage from "./components/BranchPage";
 
 const App = () => (
   <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-white antialiased overflow-x-hidden">
     <Navbar />
-    <main>
-      <Hero />
-      <Businesses />
-      <Locations />
-      <Contact />
-    </main>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/branch/:slug" element={<BranchPage />} />
+    </Routes>
     <Footer />
   </div>
-)
+);
 
-export default App
+export default App;
