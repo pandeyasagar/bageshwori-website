@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { href: "/#home", label: "Home" },
   { href: "/#business", label: "Our Businesses" },
   { href: "/#locations", label: "Locations" },
-  { href: "/#contact", label: "Contact" },
+  // { href: "/#contact", label: "Contact" },
 ];
 
 function Navbar() {

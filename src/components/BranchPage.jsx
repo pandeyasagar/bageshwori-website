@@ -89,9 +89,18 @@ function BranchPage() {
   const branch = BRANCHES.find((b) => b.slug === slug);
   const [selectedImg, setSelectedImg] = useState(0);
 
-  // Scroll to top on mount
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Scroll to top on mount with fade-in effect
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsVisible(false);
+    window.scrollTo({ top: 0, behavior: "instant" });
+    
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 200); // Small delay to ensure scroll happens first
+    
+    return () => clearTimeout(timer);
   }, [slug]);
 
   // 404 — branch not found
@@ -119,7 +128,17 @@ function BranchPage() {
   const Icon = branch.icon;
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950">
+    <>
+      {/* Loading Overlay */}
+      {!isVisible && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-gray-950">
+          <div
+            className={`w-12 h-12 border-4 border-gray-100 dark:border-gray-800 border-t-current rounded-full animate-spin ${c.text}`}
+          />
+        </div>
+      )}
+
+      <div className={`min-h-screen bg-white dark:bg-gray-950 transition-opacity duration-500 ease-in-out ${isVisible ? "opacity-100" : "opacity-0"}`}>
       {/* ── Hero Section ──────────────────────────────────── */}
       <section
         className={`relative bg-gradient-to-br ${c.gradient} text-white overflow-hidden`}
@@ -455,6 +474,7 @@ function BranchPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 
