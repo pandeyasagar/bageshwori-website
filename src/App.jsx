@@ -6,7 +6,7 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 
 const App = () => (
-  <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-white antialiased">
+  <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-white antialiased overflow-x-hidden">
     <Navbar />
     <main>
       <Hero />
