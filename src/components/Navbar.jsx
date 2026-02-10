@@ -87,7 +87,7 @@ function Navbar() {
                         href="#contact"
                         className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-600/30 hover:-translate-y-0.5 transition-all duration-300"
                     >
-                        Get in Touch
+                        Contact Us
                     </a>
                 </div>
             </div>
@@ -112,7 +112,9 @@ function Navbar() {
                     >
                         <X className="h-5 w-5" />
                     </button>
-                    <div className="pt-16 px-6 pb-8 flex flex-col h-full">
+
+
+                    <div className="pt-16 px-6 pb-8 flex flex-col gap-4">
                         <ul className="space-y-2">
                             {NAV_LINKS.map(({ href, label }, i) => (
                                 <li key={href} style={{ animationDelay: `${i * 100}ms` }} className={`${isOpen ? "animate-fade-up" : ""}`}>
@@ -132,7 +134,7 @@ function Navbar() {
                             onClick={closeMenu}
                             className="mt-auto bg-gradient-to-r from-blue-600 to-blue-700 text-white text-center py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                         >
-                            Get in Touch
+                            Contact Us
                         </a>
                     </div>
                 </div>

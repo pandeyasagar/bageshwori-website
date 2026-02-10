@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 const STATS = [
-    { value: "10+", label: "Years Excellence" },
+    { value: "10+", label: "Years of Service" },
     { value: "6", label: "Branches" },
     { value: "1k+", label: "Customers" },
     { value: "2", label: "Cities" }
