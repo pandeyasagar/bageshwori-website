@@ -88,9 +88,10 @@ function Navbar() {
         <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
+            <img src="./Bg_Logo.png" alt="Logo" className="h-8" />
             <span className="text-lg md:text-xl font-bold tracking-tight">
               <span className="text-gray-900 dark:text-white">Bageswori</span>
-              <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">groups</span>
+              <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">groups</span>
             </span>
           </Link>
 
@@ -104,7 +105,7 @@ function Navbar() {
                   className="relative text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium text-sm transition-colors group"
                 >
                   {label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-500 group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-600 to-brand-500 group-hover:w-full transition-all duration-300" />
                 </Link>
               </li>
             ))}
@@ -134,7 +135,7 @@ function Navbar() {
             <Link
               to="/#contact"
               onClick={(e) => handleNavClick(e, "/#contact")}
-              className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-600/30 hover:-translate-y-0.5 transition-all duration-300"
+              className="hidden md:inline-flex items-center bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-brand-500/25 hover:shadow-brand-600/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               Contact Us
             </Link>
@@ -173,7 +174,7 @@ function Navbar() {
                   <Link
                     to={href}
                     onClick={(e) => handleNavClick(e, href)}
-                    className="block py-3 px-4 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-900 rounded-xl font-medium transition-all duration-300"
+                    className="block py-3 px-4 text-gray-800 dark:text-gray-200 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-gray-50 dark:hover:bg-gray-900 rounded-xl font-medium transition-all duration-300"
                   >
                     {label}
                   </Link>
@@ -184,7 +185,7 @@ function Navbar() {
             <Link
               to="/#contact"
               onClick={(e) => handleNavClick(e, "/#contact")}
-              className="mt-auto bg-gradient-to-r from-blue-600 to-blue-700 text-white text-center py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="mt-auto bg-gradient-to-r from-brand-600 to-brand-700 text-white text-center py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Contact Us
             </Link>

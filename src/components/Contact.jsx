@@ -8,7 +8,7 @@ const CONTACT_INFO = [
 ];
 
 const COLORS = {
-  blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
+  blue: "bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400",
   green: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
   orange: "bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400",
 };
@@ -25,7 +25,7 @@ const Input = ({ label, type = "text", id, placeholder, ...props }) => (
       type={type}
       id={id}
       placeholder={placeholder}
-      className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all dark:text-white placeholder:text-gray-400"
+      className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all dark:text-white placeholder:text-gray-400"
       {...props}
     />
   </div>
@@ -49,7 +49,7 @@ function Contact() {
           <div className="w-full lg:w-3/5">
             {/* Section Header */}
             <div className="mb-10">
-              <span className="text-blue-600 dark:text-blue-400 font-semibold tracking-wider uppercase text-sm">
+              <span className="text-brand-600 dark:text-brand-400 font-semibold tracking-wider uppercase text-sm">
                 Get in Touch
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-5 tracking-tight">
@@ -74,7 +74,7 @@ function Contact() {
                 </label>
                 <select
                   id="subject"
-                  className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all dark:text-white"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all dark:text-white"
                 >
                   {SUBJECTS.map((subject) => (
                     <option key={subject}>{subject}</option>
@@ -91,7 +91,7 @@ function Contact() {
                   id="message"
                   rows="5"
                   placeholder="How can we help you today?"
-                  className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all resize-none dark:text-white placeholder:text-gray-400"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all resize-none dark:text-white placeholder:text-gray-400"
                   required
                 />
               </div>
@@ -103,7 +103,7 @@ function Contact() {
                 className={`w-full md:w-auto font-semibold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5 ${
                   submitted
                     ? "bg-green-500 text-white shadow-green-500/25"
-                    : "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-blue-500/25 hover:shadow-blue-600/30 hover:-translate-y-0.5"
+                    : "bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white shadow-brand-500/25 hover:shadow-brand-600/30 hover:-translate-y-0.5"
                 }`}
               >
                 {submitted ? (
@@ -124,7 +124,7 @@ function Contact() {
           {/* ── Right Side Info ───────────────────────────── */}
           <div className="w-full lg:w-2/5 flex flex-col gap-6 lg:pt-16">
             {/* Call Now Card */}
-            <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700 rounded-2xl p-7 text-white shadow-2xl shadow-blue-600/20 relative overflow-hidden group">
+            <div className="bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800 rounded-2xl p-7 text-white shadow-2xl shadow-brand-600/20 relative overflow-hidden group">
               <div className="absolute top-0 right-0 -mt-16 -mr-16 w-48 h-48 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700" />
 
               <div className="relative z-10">
@@ -132,21 +132,21 @@ function Contact() {
                   <Phone className="w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Need Immediate Help?</h3>
-                <p className="text-blue-100 mb-6 text-sm leading-relaxed">
+                <p className="text-brand-100 mb-6 text-sm leading-relaxed">
                   Our support team is available during business hours to assist you.
                 </p>
 
                 <a
                   href="tel:+97791521000"
-                  className="flex items-center justify-between bg-white text-blue-700 p-4 rounded-xl font-bold hover:bg-blue-50 transition-all group/call"
+                  className="flex items-center justify-between bg-white text-brand-700 p-4 rounded-xl font-bold hover:bg-brand-50 transition-all group/call"
                 >
                   <span className="text-lg">+977-91-521000</span>
-                  <div className="w-9 h-9 bg-blue-100 rounded-full flex items-center justify-center group-hover/call:bg-blue-200 transition-colors">
+                  <div className="w-9 h-9 bg-brand-100 rounded-full flex items-center justify-center group-hover/call:bg-brand-200 transition-colors">
                     <Phone className="w-4 h-4" />
                   </div>
                 </a>
 
-                <p className="text-center text-xs text-blue-200 mt-3 font-medium tracking-wide uppercase">
+                <p className="text-center text-xs text-brand-200 mt-3 font-medium tracking-wide uppercase">
                   Available Sun-Fri, 9AM-6PM
                 </p>
               </div>
@@ -164,7 +164,7 @@ function Contact() {
                     {item.link ? (
                       <a
                         href={item.link}
-                        className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
+                        className="text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors text-sm"
                       >
                         {item.linkText || item.content}
                       </a>

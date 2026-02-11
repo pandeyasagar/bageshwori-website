@@ -42,8 +42,8 @@ function Hero() {
           }`}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 rounded-full text-blue-600 dark:text-blue-400 text-sm font-semibold w-fit mx-auto md:mx-0 border border-blue-100 dark:border-blue-800/50">
-            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-900/20 rounded-full text-brand-600 dark:text-brand-400 text-sm font-semibold w-fit mx-auto md:mx-0 border border-brand-100 dark:border-brand-800/50">
+            <span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
             Trusted Since 2014
           </div>
 
@@ -51,7 +51,7 @@ function Hero() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.1]">
             Supporting the <br className="hidden sm:block" />
             Growth of{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-600 via-brand-500 to-brand-400 bg-clip-text text-transparent">
               Sudurpashchim
             </span>
           </h1>
@@ -66,7 +66,7 @@ function Hero() {
           <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
             <a
               href="#business"
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-7 py-3.5 rounded-full shadow-xl shadow-blue-500/25 hover:shadow-blue-600/35 font-semibold text-base hover:-translate-y-1 transition-all duration-300"
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white px-7 py-3.5 rounded-full shadow-xl shadow-brand-500/25 hover:shadow-brand-600/35 font-semibold text-base hover:-translate-y-1 transition-all duration-300"
             >
               Explore Our Businesses
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -87,8 +87,8 @@ function Hero() {
           }`}
         >
           {/* Decorative Blobs */}
-          <div className="absolute -top-10 -right-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-indigo-400/20 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute -top-10 -right-10 w-72 h-72 bg-brand-400/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-brand-300/20 rounded-full blur-3xl animate-pulse delay-1000" />
 
           <img
             src="/hero_img.png"
@@ -107,7 +107,7 @@ function Hero() {
                 <div key={i} className="flex items-center gap-16 px-8">
                   {STATS.map((stat, idx) => (
                     <div key={idx} className="flex items-center gap-3">
-                      <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
+                      <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
                         {stat.value}
                       </span>
                       <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider">
@@ -126,7 +126,7 @@ function Hero() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           ref={glowRef}
-          className="absolute w-52 h-52 bg-blue-400/20 dark:bg-blue-500/15 rounded-full blur-[100px] transition-opacity duration-200 will-change-transform opacity-0"
+          className="absolute w-52 h-52 bg-brand-400/20 dark:bg-brand-500/15 rounded-full blur-[100px] transition-opacity duration-200 will-change-transform opacity-0"
         />
       </div>
     </section>

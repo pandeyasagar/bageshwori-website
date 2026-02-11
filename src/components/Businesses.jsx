@@ -6,10 +6,10 @@ import BRANCHES from "../data/branches";
 // ─── Color Variants ───────────────────────────────────────
 const COLORS = {
   blue: {
-    icon: "text-blue-600 dark:text-blue-400",
-    bg: "bg-blue-50 dark:bg-blue-900/20",
-    border: "border-blue-100 dark:border-blue-800/50",
-    hover: "group-hover:ring-blue-500/20",
+    icon: "text-brand-600 dark:text-brand-400",
+    bg: "bg-brand-50 dark:bg-brand-900/20",
+    border: "border-brand-100 dark:border-brand-800/50",
+    hover: "group-hover:ring-brand-500/20",
   },
   green: {
     icon: "text-green-600 dark:text-green-400",
@@ -52,7 +52,7 @@ function Businesses() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ── Section Header ───────────────────────────── */}
         <div className="max-w-2xl mb-16 md:mb-20">
-          <span className="text-blue-600 dark:text-blue-400 font-semibold tracking-wider uppercase text-sm">
+          <span className="text-brand-600 dark:text-brand-400 font-semibold tracking-wider uppercase text-sm">
             Our Portfolio
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-6 tracking-tight">
@@ -90,7 +90,7 @@ function Businesses() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-sm sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 tracking-tight leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h3 className="text-sm sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 tracking-tight leading-tight group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                   {biz.name}
                 </h3>
 
@@ -105,7 +105,7 @@ function Businesses() {
                 {/* Action Button — now a Link */}
                 <Link
                   to={`/branch/${biz.slug}`}
-                  className="w-full py-2 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl border-2 border-gray-100 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm group/btn"
+                  className="w-full py-2 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl border-2 border-gray-100 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-brand-50/50 dark:hover:bg-brand-900/10 transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm group/btn"
                 >
                   <span className="hidden sm:inline">View Branch</span>
                   <span className="sm:hidden">View</span>

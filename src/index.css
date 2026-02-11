@@ -5,6 +5,32 @@
 
 @theme {
   --font-inter: "Inter", sans-serif;
+
+  /* ─── Brand Color Palette (change #006738 to update entire site) ─── */
+  --color-brand-50: #e6f2ec;
+  --color-brand-100: #b3d9c5;
+  --color-brand-200: #80c09e;
+  --color-brand-300: #4da777;
+  --color-brand-400: #268e59;
+  --color-brand-500: #006738;
+  --color-brand-600: #005c32;
+  --color-brand-700: #00512b;
+  --color-brand-800: #004625;
+  --color-brand-900: #003319;
+  --color-brand-950: #00200f;
+
+  /* ─── Hybrid Grays: Clean White Light Mode + Jet Green Dark Mode ─── */
+  --color-gray-50: #ffffff;     /* Pure White for light mode bg */
+  --color-gray-100: #f3f4f6;    /* Neutral cool gray (standard) */
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #0f1412;    /* Dark Green-Black */
+  --color-gray-900: #050806;    /* Jet Green-Black */
+  --color-gray-950: #010201;    /* Obsidian Green-Black */
 }
 
 /* Base styles */
@@ -105,8 +131,8 @@ body {
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 103, 56, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(0, 103, 56, 0.6); }
 }
 
 @keyframes float {
@@ -147,10 +173,10 @@ a, button {
 
 /* Focus styles for accessibility */
 :focus-visible {
-  @apply outline-2 outline-offset-2 outline-blue-500;
+  @apply outline-2 outline-offset-2 outline-brand-500;
 }
 
 /* Selection color */
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
+  background: rgba(0, 103, 56, 0.3);
 }

@@ -39,7 +39,7 @@ function Locations() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ── Section Header ───────────────────────────── */}
         <div className="max-w-2xl mb-14">
-          <span className="text-blue-600 dark:text-blue-400 font-semibold tracking-wider uppercase text-sm">
+          <span className="text-brand-600 dark:text-brand-400 font-semibold tracking-wider uppercase text-sm">
             Visit Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-5 tracking-tight">
@@ -63,19 +63,19 @@ function Locations() {
                   onClick={() => setActive(loc)}
                   className={`text-left p-5 rounded-2xl border-2 transition-all duration-300 ${
                     isActive
-                      ? "bg-white dark:bg-gray-900 border-blue-500 dark:border-blue-500 shadow-xl shadow-blue-500/10 scale-[1.02]"
+                      ? "bg-white dark:bg-gray-900 border-brand-500 dark:border-brand-500 shadow-xl shadow-brand-500/10 scale-[1.02]"
                       : "bg-gray-50 dark:bg-gray-900/50 border-transparent hover:border-gray-200 dark:hover:border-gray-700 hover:shadow-md"
                   }`}
                 >
                   {/* Card Header */}
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className={`text-lg font-bold transition-colors ${isActive ? "text-blue-600 dark:text-blue-400" : "text-gray-900 dark:text-white"}`}>
+                    <h3 className={`text-lg font-bold transition-colors ${isActive ? "text-brand-600 dark:text-brand-400" : "text-gray-900 dark:text-white"}`}>
                       {loc.name}
                     </h3>
                     {isActive && (
                       <span className="relative flex h-2.5 w-2.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500" />
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500" />
                       </span>
                     )}
                   </div>
@@ -112,7 +112,7 @@ function Locations() {
 
             {/* Active Location Badge */}
             <div className="absolute bottom-4 left-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md p-3.5 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 max-w-xs">
-              <p className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-0.5">
+              <p className="text-xs font-bold text-brand-600 dark:text-brand-400 uppercase tracking-wider mb-0.5">
                 Currently Viewing
               </p>
               <p className="text-sm font-semibold text-gray-900 dark:text-white">{active.name}</p>

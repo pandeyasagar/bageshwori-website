@@ -15,14 +15,14 @@ import BRANCHES from "../data/branches";
 // ─── Color Config ─────────────────────────────────────────
 const COLOR_MAP = {
   blue: {
-    gradient: "from-blue-600 via-blue-700 to-indigo-700",
-    light: "bg-blue-50 dark:bg-blue-900/20",
-    text: "text-blue-600 dark:text-blue-400",
-    border: "border-blue-200 dark:border-blue-800/50",
-    badge: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
-    ring: "ring-blue-500/20",
-    shadow: "shadow-blue-500/20",
-    accent: "bg-blue-600",
+    gradient: "from-brand-600 via-brand-700 to-brand-800",
+    light: "bg-brand-50 dark:bg-brand-900/20",
+    text: "text-brand-600 dark:text-brand-400",
+    border: "border-brand-200 dark:border-brand-800/50",
+    badge: "bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300",
+    ring: "ring-brand-500/20",
+    shadow: "shadow-brand-500/20",
+    accent: "bg-brand-600",
   },
   green: {
     gradient: "from-green-600 via-emerald-700 to-teal-700",
@@ -115,7 +115,7 @@ function BranchPage() {
         </p>
         <Link
           to="/"
-          className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all"
+          className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-full font-semibold transition-all"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
@@ -357,7 +357,7 @@ function BranchPage() {
                     </h4>
                     <a
                       href={`mailto:${branch.contact.email}`}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
+                      className="text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 text-sm transition-colors"
                     >
                       {branch.contact.email}
                     </a>
@@ -457,7 +457,7 @@ function BranchPage() {
                       <BIcon className="w-6 h-6" strokeWidth={1.5} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-bold text-gray-900 dark:text-white text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
+                      <h3 className="font-bold text-gray-900 dark:text-white text-sm group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors truncate">
                         {b.name}
                       </h3>
                       <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1 mt-0.5">
@@ -465,7 +465,7 @@ function BranchPage() {
                         {b.location}
                       </p>
                     </div>
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-blue-500 group-hover:translate-x-1 transition-all shrink-0" />
+                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-brand-500 group-hover:translate-x-1 transition-all shrink-0" />
                   </Link>
                 </RevealSection>
               );
