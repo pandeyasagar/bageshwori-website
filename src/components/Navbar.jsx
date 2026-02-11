@@ -88,7 +88,7 @@ function Navbar() {
         <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
-            <img src="./Bg_Logo.png" alt="Logo" className="h-8" />
+            <img src="./Bg_Logo.png" alt="Logo" className="h-10" />
             <span className="text-lg md:text-xl font-bold tracking-tight">
               <span className="text-gray-900 dark:text-white">Bageswori</span>
               <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">groups</span>
