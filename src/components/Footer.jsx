@@ -118,7 +118,7 @@ function Footer() {
               <li>
                 <a href="mailto:bageshworigroups@gmail.com" className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                   <Mail className="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0" />
-                  bageshworigroups@gmail.com
+                  bageshworigroup@gmail.com
                 </a>
               </li>
             </ul>
