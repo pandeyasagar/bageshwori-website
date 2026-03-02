@@ -116,7 +116,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:bageshworigroups@gmail.com" className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                <a href="mailto:bageshworigroup@gmail.com" className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                   <Mail className="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0" />
                   bageshworigroup@gmail.com
                 </a>
@@ -128,7 +128,7 @@ function Footer() {
         {/* ── Bottom Bar ─────────────────────────────────── */}
         <div className="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Bageswori Groups. All rights reserved.
+            © {new Date().getFullYear()} Bageswori Group. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {POLICIES.map((policy) => (

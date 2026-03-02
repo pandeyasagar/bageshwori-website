@@ -3,7 +3,7 @@ import { Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
 
 // ─── Contact Info Data ────────────────────────────────────
 const CONTACT_INFO = [
-  { icon: Mail, title: "Email Us", content: "bageshworigroups@gmail.com", link: "mailto:bageshworigroups@gmail.com", color: "blue" },
+  { icon: Mail, title: "Email Us", content: "bageshworigroup@gmail.com", link: "mailto:bageshworigroup@gmail.com", color: "blue" },
   { icon: Clock, title: "Business Hours", content: "Sunday - Friday", subtext: "09:30 AM - 06:30 PM", color: "orange" },
 ];
 

@@ -23,7 +23,7 @@ const BRANCHES = [
     ],
     contact: {
       phone: "+977-91-521000",
-      email: "electronics@bagesworigroups.com",
+      email: "bageshworigroup@gmail.com",
       address: "Traffic Chowk, Main Road, Dhangadhi, Kailali",
     },
     hours: "Sun - Fri: 9:30 AM - 6:30 PM",
@@ -52,7 +52,7 @@ const BRANCHES = [
     ],
     contact: {
       phone: "+977-91-521100",
-      email: "automotives@bagesworigroups.com",
+      email: "bageshworigroup@gmail.com",
       address: "Traffic Chowk, Main Road, Dhangadhi, Kailali",
     },
     hours: "Sun - Fri: 9:30 AM - 6:30 PM",
@@ -81,7 +81,7 @@ const BRANCHES = [
     ],
     contact: {
       phone: "+977-91-550200",
-      email: "multimotors@bagesworigroups.com",
+      email: "bageshworigroup@gmail.com",
       address: "Mahakali Highway, Attariya Chowk, Kailali",
     },
     hours: "Sun - Fri: 10:00 AM - 6:00 PM",
@@ -110,7 +110,7 @@ const BRANCHES = [
     ],
     contact: {
       phone: "+977-91-521200",
-      email: "ebikes@bagesworigroups.com",
+      email: "bageshworigroup@gmail.com",
       address: "Traffic Chowk, Main Road, Dhangadhi, Kailali",
     },
     hours: "Sun - Fri: 9:30 AM - 6:30 PM",
@@ -139,7 +139,7 @@ const BRANCHES = [
     ],
     contact: {
       phone: "+977-91-521300",
-      email: "recondition@bagesworigroups.com",
+      email: "bageshworigroup@gmail.com",
       address: "Traffic Chowk, Main Road, Dhangadhi, Kailali",
     },
     hours: "Sun - Fri: 9:30 AM - 6:30 PM",
@@ -168,7 +168,7 @@ const BRANCHES = [
     ],
     contact: {
       phone: "+977-91-550300",
-      email: "bikehouse@bagesworigroups.com",
+      email: "bageshworigroup@gmail.com",
       address: "Mahakali Highway, Attariya Chowk, Kailali",
     },
     hours: "Sun - Fri: 10:00 AM - 6:00 PM",
