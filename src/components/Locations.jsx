@@ -43,7 +43,7 @@ function Locations() {
             Visit Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-5 tracking-tight">
-            Find Us
+            Our Showrooms & Service Centers
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Visit our showrooms and service centers across Sudurpashchim.

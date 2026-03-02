@@ -56,7 +56,7 @@ function Businesses() {
             Our Portfolio
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-6 tracking-tight">
-            Our Businesses
+            Our Businesses in Sudurpashchim
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
             A diverse portfolio of companies dedicated to serving Sudurpashchim with integrity and quality.

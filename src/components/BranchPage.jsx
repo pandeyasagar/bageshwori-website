@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowLeft,
   MapPin,
@@ -129,6 +130,32 @@ function BranchPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{`${branch.name} | Bageshwori Group - ${branch.location}`}</title>
+        <meta name="description" content={`${branch.name} in ${branch.location}: ${branch.tagline}. ${branch.description.substring(0, 150)}...`} />
+        <link rel="canonical" href={`https://bageshworigroup.com.np/branch/${branch.slug}`} />
+        
+        {/* Structured Data for Local Business */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": branch.name,
+            "description": branch.description,
+            "url": `https://bageshworigroup.com.np/branch/${branch.slug}`,
+            "telephone": branch.contact.phone,
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": branch.contact.address,
+              "addressLocality": branch.location,
+              "addressCountry": "NP"
+            },
+            "image": branch.gallery[0],
+            "priceRange": "$$"
+          })}
+        </script>
+      </Helmet>
+
       {/* Loading Overlay */}
       {!isVisible && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-gray-950">
