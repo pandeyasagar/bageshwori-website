@@ -22,9 +22,9 @@ const BRANCHES = [
       "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80",
     ],
     contact: {
-      phone: "+977-91-521000",
-      email: "bageshworigroup@gmail.com",
-      address: "Traffic Chowk, Main Road, Dhangadhi, Kailali",
+      phone: "+977-9801751318",
+      email: "electrobageshwori@gmail.com",
+      address: "Dhangadhi -08, Kailali",
     },
     hours: "Sun - Fri: 9:30 AM - 6:30 PM",
     mapUrl:
@@ -51,9 +51,9 @@ const BRANCHES = [
       "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=800&q=80",
     ],
     contact: {
-      phone: "+977-91-521100",
-      email: "bageshworigroup@gmail.com",
-      address: "Traffic Chowk, Main Road, Dhangadhi, Kailali",
+      phone: "+977-91-522684",
+      email: "bageshworiauto@gmail.com",
+      address: "Dhangadhi -02, Main Road, Kailali",
     },
     hours: "Sun - Fri: 9:30 AM - 6:30 PM",
     mapUrl:
@@ -80,9 +80,9 @@ const BRANCHES = [
       "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=800&q=80",
     ],
     contact: {
-      phone: "+977-91-550200",
-      email: "bageshworigroup@gmail.com",
-      address: "Mahakali Highway, Attariya Chowk, Kailali",
+      phone: "+977-9801308964",
+      email: "bageshworimultimotors@gmail.com",
+      address: "Attariya -01, Dhangadhi Road, Kailali",
     },
     hours: "Sun - Fri: 10:00 AM - 6:00 PM",
     mapUrl:
@@ -109,9 +109,9 @@ const BRANCHES = [
       "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80",
     ],
     contact: {
-      phone: "+977-91-521200",
-      email: "bageshworigroup@gmail.com",
-      address: "Traffic Chowk, Main Road, Dhangadhi, Kailali",
+      phone: "+977-91-521716",
+      email: "bageshworiemotors@gmail.com",
+      address: "Dhangadhi -08, Campus Chowk, Kailali",
     },
     hours: "Sun - Fri: 9:30 AM - 6:30 PM",
     mapUrl:
@@ -138,9 +138,9 @@ const BRANCHES = [
       "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=800&q=80",
     ],
     contact: {
-      phone: "+977-91-521300",
-      email: "bageshworigroup@gmail.com",
-      address: "Traffic Chowk, Main Road, Dhangadhi, Kailali",
+      phone: "+977-91-522684",
+      email: "bageshworiauto@gmail.com",
+      address: "Dhangadhi -02, Main Road, Kailali",
     },
     hours: "Sun - Fri: 9:30 AM - 6:30 PM",
     mapUrl:
@@ -167,9 +167,9 @@ const BRANCHES = [
       "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=800&q=80",
     ],
     contact: {
-      phone: "+977-91-550300",
-      email: "bageshworigroup@gmail.com",
-      address: "Mahakali Highway, Attariya Chowk, Kailali",
+      phone: "+977-9801751318",
+      email: "bagesworigroups@gmail.com",
+      address: "Dhangadhi, 6 Lane, Chatakpur -04, Kailali",
     },
     hours: "Sun - Fri: 10:00 AM - 6:00 PM",
     mapUrl:
