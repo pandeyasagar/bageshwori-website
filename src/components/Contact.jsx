@@ -37,6 +37,13 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const data = new FormData(e.target);
+    const name = data.get("name") || "";
+    const email = data.get("email") || "";
+    const subject = data.get("subject") || "General Inquiry";
+    const message = data.get("message") || "";
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    window.location.href = `mailto:bageshworigroup@gmail.com?subject=${encodeURIComponent(`[${subject}] - ${name}`)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
   };
@@ -63,8 +70,8 @@ function Contact() {
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <Input label="Full Name" id="name" placeholder="John Doe" required />
-                <Input label="Email Address" type="email" id="email" placeholder="john@example.com" required />
+                <Input label="Full Name" id="name" name="name" placeholder="John Doe" required />
+                <Input label="Email Address" type="email" id="email" name="email" placeholder="john@example.com" required />
               </div>
 
               {/* Subject Select */}
@@ -74,6 +81,7 @@ function Contact() {
                 </label>
                 <select
                   id="subject"
+                  name="subject"
                   className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all dark:text-white"
                 >
                   {SUBJECTS.map((subject) => (
@@ -89,6 +97,7 @@ function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows="5"
                   placeholder="How can we help you today?"
                   className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all resize-none dark:text-white placeholder:text-gray-400"
@@ -137,10 +146,10 @@ function Contact() {
                 </p>
 
                 <a
-                  href="tel:+97791521000"
+                  href="tel:+97791522684"
                   className="flex items-center justify-between bg-white text-brand-700 p-4 rounded-xl font-bold hover:bg-brand-50 transition-all group/call"
                 >
-                  <span className="text-lg">+977-91-521000</span>
+                  <span className="text-lg">+977-91-522684</span>
                   <div className="w-9 h-9 bg-brand-100 rounded-full flex items-center justify-center group-hover/call:bg-brand-200 transition-colors">
                     <Phone className="w-4 h-4" />
                   </div>

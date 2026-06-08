@@ -1,5 +1,5 @@
 import { Menu, X, Sun, Moon } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 // ─── Navigation Links ─────────────────────────────────────
@@ -19,6 +19,7 @@ function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const panelRef = useRef(null);
 
   // ─── Theme Toggle ───────────────────────────────────────
   useEffect(() => {
@@ -41,7 +42,7 @@ function Navbar() {
       setLastScrollY(currentY);
     };
 
-    window.addEventListener("scroll", controlNavbar);
+    window.addEventListener("scroll", controlNavbar, { passive: true });
     return () => window.removeEventListener("scroll", controlNavbar);
   }, [lastScrollY]);
 
@@ -51,6 +52,33 @@ function Navbar() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // ─── Escape key closes menu ──────────────────────────────
+  useEffect(() => {
+    const handleKeyDown = (e) => e.key === "Escape" && setIsOpen(false);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  // ─── Focus trap for mobile menu ──────────────────────────
+  useEffect(() => {
+    if (!isOpen || !panelRef.current) return;
+    const panel = panelRef.current;
+    const focusable = panel.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    first?.focus();
+    const trap = (e) => {
+      if (e.key !== "Tab") return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last?.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first?.focus(); }
+      }
+    };
+    document.addEventListener("keydown", trap);
+    return () => document.removeEventListener("keydown", trap);
+  }, [isOpen]);
 
   // ─── Handlers ───────────────────────────────────────────
   const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
@@ -88,7 +116,7 @@ function Navbar() {
         <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center  group">
-            <img src="./Bg_Logo.png" alt="Bageshwori Group Logo" className="h-10" />
+            <img src="/Bg_Logo.png" alt="Bageshwori Group Logo" className="h-10" />
             <span className="text-lg md:text-xl font-bold tracking-tight">
               <span className="text-gray-900 dark:text-white">Bageswori</span>
               <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">groups</span>
@@ -152,7 +180,13 @@ function Navbar() {
         />
 
         {/* Slide-in Panel */}
-        <div className={`absolute top-0 right-0 w-72 h-full bg-white dark:bg-gray-950 shadow-2xl transition-transform duration-500 ease-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <div
+          ref={panelRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
+          className={`absolute top-0 right-0 w-72 h-full bg-white dark:bg-gray-950 shadow-2xl transition-transform duration-500 ease-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        >
           {/* Close Button */}
           <button
             onClick={closeMenu}

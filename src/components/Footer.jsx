@@ -34,7 +34,7 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-t from-gray-100 to-white dark:bg-gradient-to-t dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-white pt-20 pb-8 border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-gradient-to-t from-gray-100 to-white dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-white pt-20 pb-8 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           {/* Brand & Socials */}
@@ -56,6 +56,7 @@ function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
+                  onClick={(e) => href === "#" && e.preventDefault()}
                   className={`w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-white ${hoverBg} transition-all duration-300 shadow-sm`}
                 >
                   <Icon className="w-4 h-4" />
@@ -107,12 +108,12 @@ function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-400">
                 <MapPin className="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0 mt-0.5" />
-                <span>Traffic Chowk, Main Road,<br />Dhangadhi, Kailali</span>
+                <span>Dhangadhi -02, Main Road,<br />Kailali</span>
               </li>
               <li>
-                <a href="tel:+97791521000" className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                <a href="tel:+97791522684" className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                   <Phone className="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0" />
-                  +977-91-521000
+                  +977-91-522684
                 </a>
               </li>
               <li>
@@ -135,6 +136,7 @@ function Footer() {
               <a
                 key={policy}
                 href="#"
+                onClick={(e) => e.preventDefault()}
                 className="text-gray-500 hover:text-brand-600 dark:hover:text-brand-400 text-sm transition-colors"
               >
                 {policy}

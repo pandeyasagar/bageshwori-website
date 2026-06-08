@@ -17,9 +17,11 @@ function Hero() {
   useEffect(() => {
     setIsVisible(true);
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const handleMouseMove = (e) => {
       if (glowRef.current) {
-        glowRef.current.style.transform = `translate(${e.pageX - 100}px, ${e.pageY - 100}px)`;
+        glowRef.current.style.transform = `translate(${e.clientX - 100}px, ${e.clientY - 100}px)`;
         glowRef.current.style.opacity = "1";
       }
     };
@@ -93,6 +95,8 @@ function Hero() {
           <img
             src="/hero_img.png"
             alt="Bageshwori Group - Empowering Sudurpashchim with Quality Solutions"
+            width={600}
+            height={500}
             className="relative w-full max-w-md lg:max-w-lg h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-gray-900/5 dark:ring-white/10 hover:scale-[1.02] transition-transform duration-500"
           />
         </div>

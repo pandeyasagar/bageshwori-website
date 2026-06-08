@@ -64,7 +64,7 @@ function Businesses() {
         </div>
 
         {/* ── Cards Grid ───────────────────────────────── */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {BRANCHES.map((biz, i) => {
             const c = COLORS[biz.color];
             const isCardVisible = visibleCards.includes(i);
@@ -90,26 +90,22 @@ function Businesses() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-sm sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 tracking-tight leading-tight group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                <h3 className="text-base sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 tracking-tight leading-tight group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                   {biz.name}
                 </h3>
 
-                {/* Description - responsive variants */}
-                <p className="text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 flex-grow text-xs sm:text-sm leading-relaxed hidden sm:block">
-                  {biz.description}
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow text-xs leading-relaxed sm:hidden line-clamp-2">
+                {/* Description */}
+                <p className="text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 flex-grow text-sm leading-relaxed line-clamp-3 sm:line-clamp-none">
                   {biz.description}
                 </p>
 
-                {/* Action Button — now a Link */}
+                {/* Action Button */}
                 <Link
                   to={`/branch/${biz.slug}`}
-                  className="w-full py-2 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl border-2 border-gray-100 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-brand-50/50 dark:hover:bg-brand-900/10 transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm group/btn"
+                  className="w-full py-2.5 sm:py-3 px-4 rounded-xl border-2 border-gray-100 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-brand-50/50 dark:hover:bg-brand-900/10 transition-all duration-300 flex items-center justify-center gap-2 text-sm group/btn"
                 >
-                  <span className="hidden sm:inline">View Branch</span>
-                  <span className="sm:hidden">View</span>
-                  <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 group-hover/btn:translate-x-1 transition-transform" />
+                  View Branch
+                  <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
             );
